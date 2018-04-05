@@ -3,11 +3,14 @@
 #include"task_svr/lf_tasksvr_config.h"
 #include"task_svr/lf_task_http_dispatch_cb.h"
 
+
+
 #define TASK_THREAD_NUM 4
+
 using namespace LF;
 int main(int argc, char* argv[])
 {
-	lf_string path("./lf_service.config");
+	lf_string path("./lf_service.conf");
 	//todo:@str get path
 	if (!lf_tasksvr_config_mgr::singleton().read_config_file(path))
 	{

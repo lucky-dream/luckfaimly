@@ -9,13 +9,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\dbmgr\lf_db_mgr.h">
-      <Filter>include</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\src\dbmgr\lf_db_mgr.cpp">
       <Filter>src</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\dbmgr\lf_db_mgr.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

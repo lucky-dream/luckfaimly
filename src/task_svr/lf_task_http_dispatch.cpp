@@ -3,6 +3,7 @@
 #include"task_svr/lf_tasksvr_constant_def.h"
 #include"task_svr/lf_task_service_handler.h"
 #include"task_svr/lf_token_mgr.h"
+#include"util\lf_code_util.h"
 namespace LF
 {
 	static bool UriDecode(const std::string& str, std::string& decodedStr, bool plusAsSpace)
@@ -42,6 +43,37 @@ namespace LF
 		}
 		return true;
 	}
+
+	static bool is_basic(const lf_string& auth)
+	{
+		if (auth.length() <= 5)
+		{
+			return false;
+		}
+		lf_string basic = auth.substr(0,5);
+		if (basic == "Basic")
+		{
+			return true;
+		}
+		return false;
+	}
+
+	static lf_string decode_base64(lf_string auth)
+	{
+		if (auth.length() < 6)
+		{
+			return lf_string();
+		}
+		lf_string user_data = auth.substr(6, auth.length()-6);
+		if (user_data.empty())
+		{
+			return lf_string();
+		}
+		lf_string out_user_data;
+		lf_code_util::base64_decode(user_data, out_user_data);
+		return out_user_data;
+	}
+
 	void LF::lf_task_http_dispath::task_http_service_dispath(const LFCtxPtr & ctx, const lf_name_value_collection& params, const lf_string& op)
 	{
 		Uint32 cmd = lf_task_cmd_map::singleton().get_cmd(op);
@@ -53,7 +85,37 @@ namespace LF
 		case LF_TASK_CMD_LOGIN:
 		{
 			lf_string name,password;
-			ret = lf_task_service_handler::login(name, password, body);
+			lf_string str = "Authenticate";
+			const char* auth = ctx->FindRequestHeader(str.c_str());
+			if (auth == NULL)
+			{
+				ret = false;
+				body.append("Not Authenticate!");
+			}
+			else 
+			{
+				if (!is_basic(auth))
+				{
+					ret = false;
+					body.append("Not Auth!");
+				}
+				else
+				{
+					lf_string user_info = decode_base64(auth);
+					if (user_info.empty())
+					{
+						ret = false;
+						body.append("Not UserInfo!");
+					}
+					else
+					{
+						int index = user_info.find_first_of(":");
+						name = user_info.substr(0, index);
+						password = user_info.substr(index+1, user_info.length() - index - 1);
+						ret = lf_task_service_handler::login(name, password, body);
+					}			
+				}	
+			}
 			ctx->set_response_http_code(ret ? lf_http_def::HTTP_OK : lf_http_def::HTTP_UNAUTHORIZED);
 			ctx->AddResponseHeader("Content-Type", "text/html");
 			ctx->AddResponseHeader("Server", "LF_TASK");

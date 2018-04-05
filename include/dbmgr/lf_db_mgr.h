@@ -48,7 +48,6 @@ namespace LF
 		static bool destroy(); //Ä£¿éÏú»Ù
 	};
 
-
 }
 #endif // !LF_DB_MGR_H
 

@@ -16,8 +16,6 @@ namespace LF
 			return _tasksvr;
 		}
 	private:
-		bool parse_tasksvr_config();
-		bool parse_proxy_config();
 		lf_tasksvr_config_info _tasksvr;
 	};
 }
