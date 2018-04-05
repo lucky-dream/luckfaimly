@@ -41,7 +41,7 @@ namespace LF
 		lf_db_object* dequeue();
 		void clear();
 	private:
-		typedef std::queue<lf_db_object> DbConnQue;
+		typedef std::queue<lf_db_object*> DbConnQue;
 		DbConnQue _db_conns;
 		lf_lock _mutex;
 	};

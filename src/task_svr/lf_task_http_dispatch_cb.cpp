@@ -3,7 +3,7 @@
 #include"net/lf_slice.h"
 #include"util/lf_string_util.h"
 #include"util/lf_name_value_collection.h"
-#include"task_svr/lf_task_http_dispath.h"
+#include"task_svr/lf_task_http_dispatch.h"
 namespace LF
 {
 	static void ParserURI(std::string& in_uri/*, std::string& out_theme, std::string& out_layer*/, lf_name_value_collection& out_nv)

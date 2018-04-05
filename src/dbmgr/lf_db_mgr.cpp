@@ -21,12 +21,14 @@ namespace LF
 	bool lf_db_object::close()
 	{
 		mysql_close(_mysql);
-		if(_mysql)
-		    return false;
+		_mysql = NULL;
+		//if(_mysql)
+		//    return false;
+		return false;
 	}
 	bool lf_db_object::connect(const lf_db_info & db_info)
 	{
-		MYSQL* mysql;
+		MYSQL* mysql = NULL;
 		mysql_init(mysql);
 		mysql = mysql_real_connect(mysql, db_info._host.c_str(), db_info._user_name.c_str(), db_info._password.c_str(),
 			db_info._dbname.c_str(), db_info._port, NULL, CLIENT_MULTI_STATEMENTS);
@@ -47,7 +49,8 @@ namespace LF
 		lf_lock::scoped_lock scoped_mutex(_mutex);
 		if (db != NULL)
 		{
-			_db_conns.push(*db);
+			_db_conns.push(db);
+			return true;
 		}
 		else
 		{
@@ -58,11 +61,11 @@ namespace LF
 	lf_db_object * lf_db_mgr::dequeue()
 	{
 		lf_lock::scoped_lock scoped_mutex(_mutex);
-		lf_db_object m_db = _db_conns.front();
-		if (m_db.mysql)
+		lf_db_object* m_db = _db_conns.front();
+		if (m_db&&m_db->mysql())
 		{
 			_db_conns.pop(); // 在取出元素后，出列
-			return m_db.mysql;
+			return m_db;
 		}
 		else
 		{
@@ -109,6 +112,7 @@ namespace LF
 		//返回
 		if(!lf_db_mgr::singleton().enqueue(db))
 		    return false;
+		return true;
 	}
 	bool lf_db_module::destroy()
 	{

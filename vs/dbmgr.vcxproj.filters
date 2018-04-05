@@ -8,14 +8,4 @@
       <UniqueIdentifier>{1e1233ce-c3c7-4a04-9f57-afa3a45421ab}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\include\dbmgr\lf_db_mgr.h">
-      <Filter>include</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\dbmgr\lf_db_mgr.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>

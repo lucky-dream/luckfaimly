@@ -37,15 +37,13 @@
     <ClCompile Include="..\src\task_svr\lf_tasksvr_config.cpp">
       <Filter>def</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\dbmgr\lf_db_mgr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\task_svr\lf_tasksvr_constant_def.h">
       <Filter>def</Filter>
     </ClInclude>
     <ClInclude Include="..\include\task_svr\lf_task_http_dispatch_cb.h">
-      <Filter>api</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\task_svr\lf_task_http_dispath.h">
       <Filter>api</Filter>
     </ClInclude>
     <ClInclude Include="..\include\task_svr\lf_task_service_handler.h">
@@ -60,5 +58,9 @@
     <ClInclude Include="..\include\task_svr\lf_tasksvr_config.h">
       <Filter>def</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\task_svr\lf_task_http_dispatch.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\dbmgr\lf_db_mgr.h" />
   </ItemGroup>
 </Project>

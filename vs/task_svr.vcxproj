@@ -95,11 +95,12 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libmysql.lib;evpp_static.lib;dbmgrd.lib;lfnetd.lib;utild.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libmysql.lib;evpp_static.lib;lfnetd.lib;utild.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(ProjectDir)../3rd/mysqlclient/bin/x$(PlatformArchitecture)/$(Configuration);$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib;%(AdditionalLibraryDirectories);$(VcpkgRoot)debug\lib;$(VcpkgRoot)debug\lib\manual-link</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)..\3rd\mysqlclient\bin\x$(PlatformArchitecture)\$(Configuration)\*.dll" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"</Command>
+      <Command>xcopy "$(ProjectDir)..\3rd\mysqlclient\bin\x$(PlatformArchitecture)\$(Configuration)\*.dll" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"
+xcopy "$(ProjectDir)..\config\*" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -113,13 +114,14 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libmysql.lib;evpp_static.lib;dbmgrd.lib;lfnetd.lib;utild.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libmysql.lib;evpp_static.lib;lfnetd.lib;utild.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(ProjectDir)../3rd/mysqlclient/bin/x$(PlatformArchitecture)/$(Configuration);$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib;%(AdditionalLibraryDirectories);$(VcpkgRoot)debug\lib;$(VcpkgRoot)debug\lib\manual-link</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>
       </IgnoreAllDefaultLibraries>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)..\3rd\mysqlclient\bin\x$(PlatformArchitecture)\$(Configuration)\*.dll" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"</Command>
+      <Command>xcopy "$(ProjectDir)..\3rd\mysqlclient\bin\x$(PlatformArchitecture)\$(Configuration)\*.dll" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"
+xcopy "$(ProjectDir)..\config\*" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -141,7 +143,7 @@
       <AdditionalLibraryDirectories>$(ProjectDir)../3rd/mysqlclient/bin/x$(PlatformArchitecture)/$(Configuration);$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib;%(AdditionalLibraryDirectories);$(VcpkgRoot)lib;$(VcpkgRoot)lib\manual-link</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)..\3rd\mysqlclient\bin\x$(PlatformArchitecture)\$(Configuration)\*.dll" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"</Command>
+      <Command>xcopy "$(ProjectDir)../3rd/mysqlclient/bin/x$(PlatformArchitecture)/$(Configuration)/*.dll" "$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -163,10 +165,11 @@
       <AdditionalLibraryDirectories>$(ProjectDir)../3rd/mysqlclient/bin/x$(PlatformArchitecture)/$(Configuration);$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib;%(AdditionalLibraryDirectories);$(VcpkgRoot)lib;$(VcpkgRoot)lib\manual-link</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)..\3rd\mysqlclient\bin\x$(PlatformArchitecture)\$(Configuration)\*.dll" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"</Command>
+      <Command>xcopy "$(ProjectDir)../3rd/mysqlclient/bin/x$(PlatformArchitecture)/$(Configuration)/*.dll" "$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\dbmgr\lf_db_mgr.cpp" />
     <ClCompile Include="..\src\task_svr\lf_tasksvr_config.cpp" />
     <ClCompile Include="..\src\task_svr\lf_tasksvr_constant_def.cpp" />
     <ClCompile Include="..\src\task_svr\lf_task_http_dispatch.cpp" />
@@ -177,10 +180,11 @@
     <ClCompile Include="..\src\task_svr\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\include\dbmgr\lf_db_mgr.h" />
     <ClInclude Include="..\include\task_svr\lf_tasksvr_config.h" />
     <ClInclude Include="..\include\task_svr\lf_tasksvr_constant_def.h" />
     <ClInclude Include="..\include\task_svr\lf_task_http_dispatch_cb.h" />
-    <ClInclude Include="..\include\task_svr\lf_task_http_dispath.h" />
+    <ClInclude Include="..\include\task_svr\lf_task_http_dispatch.h" />
     <ClInclude Include="..\include\task_svr\lf_task_service_handler.h" />
     <ClInclude Include="..\include\task_svr\lf_token_mgr.h" />
     <ClInclude Include="..\include\task_svr\lf_user_register_cache.h" />

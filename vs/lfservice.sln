@@ -23,6 +23,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "task_svr", "task_svr.vcxpro
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dbmgr", "dbmgr.vcxproj", "{ED5E9380-028E-4331-9703-2F87586C2C14}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6FDDC98E-3642-429F-AECC-BF887C8930CA} = {6FDDC98E-3642-429F-AECC-BF887C8930CA}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

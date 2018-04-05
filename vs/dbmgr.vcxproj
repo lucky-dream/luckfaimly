@@ -101,6 +101,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)../3rd\mysqlclient\bin\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib;%(AdditionalLibraryDirectories);$(VcpkgRoot)debug\lib;$(VcpkgRoot)debug\lib\manual-link</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <OutputFile>libmysql.lib;</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)../3rd/mysqlclient/bin/x$(PlatformArchitecture)/$(Configuration)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -113,6 +117,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(ProjectDir)../3rd\mysqlclient\bin\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib;%(AdditionalLibraryDirectories);$(VcpkgRoot)debug\lib;$(VcpkgRoot)debug\lib\manual-link</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <OutputFile>libmysql.lib;</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)../3rd/mysqlclient/bin/x$(PlatformArchitecture)/$(Configuration)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -129,6 +137,10 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(ProjectDir)../3rd\mysqlclient\bin\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib;%(AdditionalLibraryDirectories);$(VcpkgRoot)lib;$(VcpkgRoot)lib\manual-link</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <OutputFile>libmysql.lib;</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)../3rd/mysqlclient/bin/x$(PlatformArchitecture)/$(Configuration)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -145,13 +157,11 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(ProjectDir)../3rd\mysqlclient\bin\$(PlatformTarget)\$(Configuration)\;$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib;%(AdditionalLibraryDirectories);$(VcpkgRoot)lib;$(VcpkgRoot)lib\manual-link</AdditionalLibraryDirectories>
     </Link>
+    <Lib>
+      <OutputFile>libmysql.lib;</OutputFile>
+      <AdditionalLibraryDirectories>$(ProjectDir)../3rd/mysqlclient/bin/x$(PlatformArchitecture)/$(Configuration)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\include\dbmgr\lf_db_mgr.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\src\dbmgr\lf_db_mgr.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
