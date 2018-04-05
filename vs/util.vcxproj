@@ -144,6 +144,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\3rd\xxHash\xxhash.h" />
     <ClInclude Include="..\include\util\lf_base_def.h" />
     <ClInclude Include="..\include\util\lf_name_value_collection.h" />
     <ClInclude Include="..\include\util\lf_singleton.h" />
@@ -155,6 +156,7 @@
     <ClInclude Include="..\include\util\lf_code_util.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\3rd\xxHash\xxhash.c" />
     <ClCompile Include="..\src\util\lf_lock.cpp" />
     <ClCompile Include="..\src\util\lf_ascii.cpp" />
     <ClCompile Include="..\src\util\lf_name_value_collection.cpp" />

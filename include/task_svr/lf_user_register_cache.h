@@ -1,6 +1,7 @@
 #ifndef LF_USER_REGISTER_CACHE_H
 #define LF_USER_REGISTER_CACHE_H
 #include"util/lf_singleton.h"
+#include"util/lf_lock.h"
 #include<memory>
 #include<map>
 namespace LF
@@ -26,6 +27,7 @@ namespace LF
 	private:
 		typedef std::map<lf_string, UserInfoPtr> UserInfoMap;
 		UserInfoMap _users;
+		lf_lock _mutex;
 	};
 }
 #endif // !LF_USER_REGISTER_CACHE_H

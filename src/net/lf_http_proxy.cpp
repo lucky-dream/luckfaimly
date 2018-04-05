@@ -38,7 +38,7 @@ namespace LF
 		{
 			r->AddHeader(it->first,it->second);
 		}
-		auto f = [ctx, cb](const std::shared_ptr<evpp::httpc::Response>& response){/
+		auto f = [ctx, cb](const std::shared_ptr<evpp::httpc::Response>& response){
 			ctx->set_response_http_code(response->http_code());
 			std::string rc = response->body().ToString();
 			cb(rc);
