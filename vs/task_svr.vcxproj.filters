@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="api">
+      <UniqueIdentifier>{34427854-a0c4-4ad5-98b0-73114bbcff4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="service">
+      <UniqueIdentifier>{a90ecdbc-318a-4fce-9dd2-d55a2e0db513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="def">
+      <UniqueIdentifier>{d9b3ab8f-9fa8-4ed0-8577-567670636d65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="user-mgr">
+      <UniqueIdentifier>{bcbef228-9c3c-4cfc-9d0e-c2643c82dad0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\task_svr\main.cpp" />
+    <ClCompile Include="..\src\task_svr\lf_tasksvr_constant_def.cpp">
+      <Filter>def</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\task_svr\lf_task_http_dispatch_cb.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\task_svr\lf_task_http_dispatch.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\task_svr\lf_task_service_handler.cpp">
+      <Filter>service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\task_svr\lf_token_mgr.cpp">
+      <Filter>user-mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\task_svr\lf_user_register_cache.cpp">
+      <Filter>user-mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\task_svr\lf_tasksvr_config.cpp">
+      <Filter>def</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\task_svr\lf_tasksvr_constant_def.h">
+      <Filter>def</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\task_svr\lf_task_http_dispatch_cb.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\task_svr\lf_task_http_dispath.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\task_svr\lf_task_service_handler.h">
+      <Filter>service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\task_svr\lf_token_mgr.h">
+      <Filter>user-mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\task_svr\lf_user_register_cache.h">
+      <Filter>user-mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\task_svr\lf_tasksvr_config.h">
+      <Filter>def</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

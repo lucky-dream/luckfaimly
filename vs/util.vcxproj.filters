@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="base">
+      <UniqueIdentifier>{1de7b35e-540e-43d0-b211-27ebf3e44476}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\util\lf_base_def.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\lf_singleton.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\lf_lock.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\lf_scoped_lock.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\lf_os_type.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\lf_string_util.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\lf_ascii.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\lf_name_value_collection.h">
+      <Filter>base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\lf_code_util.h">
+      <Filter>base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\util\lf_lock.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\lf_ascii.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\lf_name_value_collection.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\lf_code_util.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

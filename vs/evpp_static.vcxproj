@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{92052093-571F-39CC-A770-8CB9A9C954FC}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>evpp_static</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/obj/$(ProjectName)</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">evpp_static</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">evpp_static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/obj/$(ProjectName)</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">evpp_static</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">evpp_static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/obj/$(ProjectName)</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">evpp_static</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">evpp_static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/obj/$(ProjectName)</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">evpp_static</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">evpp_static</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <OutDir>$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib</OutDir>
+    <IntDir>$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/obj/$(ProjectName)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib</OutDir>
+    <IntDir>$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/obj/$(ProjectName)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <OutDir>$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib</OutDir>
+    <IntDir>$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/obj/$(ProjectName)</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib</OutDir>
+    <IntDir>$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/obj/$(ProjectName)</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>WIN32;_WIN32;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WIN32;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>WIN32;_WIN32;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WIN32;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WIN32;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>\\include;D:\demo\zxq_dome\luckfaimly\3rd\evpp;D:\demo\zxq_dome\luckfaimly\3rd\evpp\3rdparty\wininclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+D:\software\cmake\cmake-3.9.2-win64-x64\bin\cmake.exe -HD:/demo/zxq_dome/luckfaimly/3rd/evpp -BD:/demo/zxq_dome/luckfaimly/3rd/evpp/build --check-stamp-file D:/demo/zxq_dome/luckfaimly/3rd/evpp/build/evpp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\software\cmake\cmake-3.9.2-win64-x64\bin\cmake.exe -HD:/demo/zxq_dome/luckfaimly/3rd/evpp -BD:/demo/zxq_dome/luckfaimly/3rd/evpp/build --check-stamp-file D:/demo/zxq_dome/luckfaimly/3rd/evpp/build/evpp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\demo\zxq_dome\luckfaimly\3rd\evpp\build\evpp\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\demo\zxq_dome\luckfaimly\3rd\evpp\build\evpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+D:\software\cmake\cmake-3.9.2-win64-x64\bin\cmake.exe -HD:/demo/zxq_dome/luckfaimly/3rd/evpp -BD:/demo/zxq_dome/luckfaimly/3rd/evpp/build --check-stamp-file D:/demo/zxq_dome/luckfaimly/3rd/evpp/build/evpp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\software\cmake\cmake-3.9.2-win64-x64\bin\cmake.exe -HD:/demo/zxq_dome/luckfaimly/3rd/evpp -BD:/demo/zxq_dome/luckfaimly/3rd/evpp/build --check-stamp-file D:/demo/zxq_dome/luckfaimly/3rd/evpp/build/evpp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\demo\zxq_dome\luckfaimly\3rd\evpp\build\evpp\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\demo\zxq_dome\luckfaimly\3rd\evpp\build\evpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+D:\software\cmake\cmake-3.9.2-win64-x64\bin\cmake.exe -HD:/demo/zxq_dome/luckfaimly/3rd/evpp -BD:/demo/zxq_dome/luckfaimly/3rd/evpp/build --check-stamp-file D:/demo/zxq_dome/luckfaimly/3rd/evpp/build/evpp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\software\cmake\cmake-3.9.2-win64-x64\bin\cmake.exe -HD:/demo/zxq_dome/luckfaimly/3rd/evpp -BD:/demo/zxq_dome/luckfaimly/3rd/evpp/build --check-stamp-file D:/demo/zxq_dome/luckfaimly/3rd/evpp/build/evpp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\demo\zxq_dome\luckfaimly\3rd\evpp\build\evpp\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\demo\zxq_dome\luckfaimly\3rd\evpp\build\evpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+D:\software\cmake\cmake-3.9.2-win64-x64\bin\cmake.exe -HD:/demo/zxq_dome/luckfaimly/3rd/evpp -BD:/demo/zxq_dome/luckfaimly/3rd/evpp/build --check-stamp-file D:/demo/zxq_dome/luckfaimly/3rd/evpp/build/evpp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\software\cmake\cmake-3.9.2-win64-x64\bin\cmake.exe -HD:/demo/zxq_dome/luckfaimly/3rd/evpp -BD:/demo/zxq_dome/luckfaimly/3rd/evpp/build --check-stamp-file D:/demo/zxq_dome/luckfaimly/3rd/evpp/build/evpp/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:/demo/zxq_dome/luckfaimly/3rd/evpp/evpp/CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\demo\zxq_dome\luckfaimly\3rd\evpp\build\evpp\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\demo\zxq_dome\luckfaimly\3rd\evpp\build\evpp\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\buffer.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\connector.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\dns_resolver.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\duration.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop_thread.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop_thread_pool.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_watcher.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\fd_channel.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\inner_pre.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\invoke_timer.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\libevent.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\listener.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\sockets.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_client.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_conn.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_server.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\context.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\http_server.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\service.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\conn.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\conn_pool.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\request.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\response.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\ssl.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\url_parser.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\udp\sync_udp_client.cc" />
+    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\udp\udp_server.cc" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\any.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\buffer.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\connector.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\dns_resolver.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\duration.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\duration.inl.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop_thread.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop_thread_pool.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_watcher.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\fd_channel.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\gettimeofday.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\inner_pre.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\invoke_timer.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\libevent.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\listener.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\logging.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\memmem.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\platform_config.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\server_status.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\slice.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\sockets.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\sys_addrinfo.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\sys_sockets.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_callbacks.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_client.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_conn.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_server.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\thread_dispatch_policy.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\timestamp.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\timestamp.inl.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\utility.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\windows_port.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\context.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\http_server.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\service.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\stats.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\conn.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\conn_pool.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\request.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\response.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\ssl.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\url_parser.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\udp\sync_udp_client.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\udp\udp_message.h" />
+    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\udp\udp_server.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\build\ZERO_CHECK.vcxproj">
+      <Project>{1C6E682D-4A95-3106-9ECC-059A291FC489}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

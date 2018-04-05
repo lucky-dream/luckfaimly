@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="http">
+      <UniqueIdentifier>{a71a4a73-9c58-4c7a-a156-6845fdda3266}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\client">
+      <UniqueIdentifier>{f9d9cc54-1afa-4aff-a8d1-cf2d2c925f45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\def">
+      <UniqueIdentifier>{ae442d4b-66ea-4227-8a5f-5192a9426ac0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\svr">
+      <UniqueIdentifier>{f6d0afe4-fedc-49b0-85ca-489b46397c52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\svr\include">
+      <UniqueIdentifier>{d61a86cd-04d3-47ac-a833-33226465b46c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\svr\src">
+      <UniqueIdentifier>{103b02c0-6562-4d64-b726-9e4da416264d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\def\include">
+      <UniqueIdentifier>{4b4aa52e-d590-442a-86bb-02709ccb9c93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\def\src">
+      <UniqueIdentifier>{01b901e0-54ec-4191-9429-3ccadf653d90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\client\include">
+      <UniqueIdentifier>{3e06c210-0e25-44fc-9c17-8c472da27494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http\client\src">
+      <UniqueIdentifier>{fc65e9e4-c275-4843-8f19-e47725d269b8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\net\lf_http_client.cpp">
+      <Filter>http\client\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\lf_context.cpp">
+      <Filter>http\svr\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\lf_http_proxy.cpp">
+      <Filter>http\client\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\lf_proxy_conf.cpp">
+      <Filter>http\client\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\net\lf_http_server.cpp">
+      <Filter>http\svr\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\net\lf_http_client.h">
+      <Filter>http\client\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\net\lf_context.h">
+      <Filter>http\svr\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\net\lf_slice.h">
+      <Filter>http\def\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\net\lf_http_proxy.h">
+      <Filter>http\client\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\net\lf_proxy_conf.h">
+      <Filter>http\client\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\net\lf_http_def.h">
+      <Filter>http\def\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\net\lf_http_server.h">
+      <Filter>http\svr\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
