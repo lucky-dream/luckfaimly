@@ -14,20 +14,26 @@ namespace LF
 		lf_string _user_name;
 		lf_string _password;
 		lf_string _dbname;
+		//const char * unix_socket;
+		//unsigned long clientflag;        //一般情况下，unix_socket设置为空， 
+		                               //clientflag 设为CLIENT_MULTI_STATEMENTS 用以支持同时查询多条语句，语句之间通过分号分割
 	};
+
 	class lf_db_object
 	{
 	public:
 		lf_db_object(const lf_db_info& db_info);
-		lf_db_object(MYSQL* _mysql);
+		lf_db_object(MYSQL* mysql);
 		bool close();
 		MYSQL* mysql() {
 			return _mysql;
 		}
+		
 	private:
 		bool connect(const lf_db_info& db_info);
 		MYSQL* _mysql;
 	};
+
 	class lf_db_mgr :public lf_singleton<lf_db_mgr>
 	{
 	public:
@@ -39,6 +45,7 @@ namespace LF
 		DbConnQue _db_conns;
 		lf_lock _mutex;
 	};
+
 	class lf_db_module
 	{
 	public:
