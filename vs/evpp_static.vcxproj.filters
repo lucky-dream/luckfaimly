@@ -1,234 +1,5 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\buffer.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\connector.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\dns_resolver.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\duration.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop_thread.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop_thread_pool.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_watcher.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\fd_channel.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\inner_pre.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\invoke_timer.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\libevent.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\listener.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\sockets.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_client.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_conn.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_server.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\context.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\http_server.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\service.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\conn.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\conn_pool.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\request.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\response.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\ssl.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\url_parser.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\udp\sync_udp_client.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\udp\udp_server.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\any.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\buffer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\connector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\dns_resolver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\duration.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\duration.inl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop_thread.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_loop_thread_pool.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\event_watcher.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\fd_channel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\gettimeofday.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\inner_pre.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\invoke_timer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\libevent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\listener.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\logging.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\memmem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\platform_config.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\server_status.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\slice.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\sockets.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\sys_addrinfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\sys_sockets.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_callbacks.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_client.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_conn.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\tcp_server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\thread_dispatch_policy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\timestamp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\timestamp.inl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\utility.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\windows_port.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\context.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\http_server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\service.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\http\stats.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\conn.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\conn_pool.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\request.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\response.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\ssl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\httpc\url_parser.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\udp\sync_udp_client.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\udp\udp_message.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\udp\udp_server.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <CustomBuild Include="D:\demo\zxq_dome\luckfaimly\3rd\evpp\evpp\CMakeLists.txt" />
-  </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
       <UniqueIdentifier>{CF12332D-B954-32B0-BC9B-97F6C869A7A1}</UniqueIdentifier>
@@ -236,5 +7,243 @@
     <Filter Include="Header Files">
       <UniqueIdentifier>{87F7755D-90CE-3866-B6D4-CBC8DBFC2BE2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="udp">
+      <UniqueIdentifier>{810e8a02-165f-4c26-b5b7-593ab3f6bb48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="http">
+      <UniqueIdentifier>{b9687316-55fa-4bc3-bbd1-7e1992bcb955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="httpc">
+      <UniqueIdentifier>{706d94bd-7918-461c-b206-b34e858b7dca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\3rd\evpp\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3rd\evpp\evpp\any.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\connector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\dns_resolver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\duration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\duration.inl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\event_loop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\event_loop_thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\event_loop_thread_pool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\event_watcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\fd_channel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\gettimeofday.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\inner_pre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\invoke_timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\libevent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\listener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\logging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\memmem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\platform_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\server_status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\slice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\sockets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\sys_addrinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\sys_sockets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\tcp_callbacks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\tcp_client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\tcp_conn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\tcp_server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\thread_dispatch_policy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\timestamp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\timestamp.inl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\windows_port.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\udp\sync_udp_client.h">
+      <Filter>udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\udp\udp_message.h">
+      <Filter>udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\udp\udp_server.h">
+      <Filter>udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\httpc\conn.h">
+      <Filter>httpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\httpc\conn_pool.h">
+      <Filter>httpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\httpc\request.h">
+      <Filter>httpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\httpc\response.h">
+      <Filter>httpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\httpc\ssl.h">
+      <Filter>httpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\httpc\url_parser.h">
+      <Filter>httpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\http\context.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\http\http_server.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\http\service.h">
+      <Filter>http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rd\evpp\evpp\http\stats.h">
+      <Filter>http</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\3rd\evpp\evpp\buffer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\connector.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\dns_resolver.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\duration.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\event_loop.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\event_loop_thread.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\event_loop_thread_pool.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\event_watcher.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\fd_channel.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\inner_pre.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\invoke_timer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\libevent.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\listener.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\sockets.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\tcp_client.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\tcp_conn.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\tcp_server.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\udp\sync_udp_client.cc">
+      <Filter>udp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\udp\udp_server.cc">
+      <Filter>udp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\httpc\conn.cc">
+      <Filter>httpc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\httpc\conn_pool.cc">
+      <Filter>httpc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\httpc\request.cc">
+      <Filter>httpc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\httpc\response.cc">
+      <Filter>httpc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\httpc\ssl.cc">
+      <Filter>httpc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\httpc\url_parser.cc">
+      <Filter>httpc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\http\context.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\http\http_server.cc">
+      <Filter>http</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rd\evpp\evpp\http\service.cc">
+      <Filter>http</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
