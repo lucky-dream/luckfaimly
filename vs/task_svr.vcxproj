@@ -99,8 +99,8 @@
       <AdditionalLibraryDirectories>$(ProjectDir)../3rd/mysqlclient/bin/x$(PlatformArchitecture)/$(Configuration);$(ProjectDir)../bin/$(Configuration)$(PlatformArchitecture)/lib;%(AdditionalLibraryDirectories);$(VcpkgRoot)debug\lib;$(VcpkgRoot)debug\lib\manual-link</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)..\3rd\mysqlclient\bin\x$(PlatformArchitecture)\$(Configuration)\*.dll" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"
-xcopy "$(ProjectDir)..\config\*" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"</Command>
+      <Command>xcopy/y "$(ProjectDir)..\3rd\mysqlclient\bin\x$(PlatformArchitecture)\$(Configuration)\*.dll" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"
+xcopy/y "$(ProjectDir)..\config\*" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -120,8 +120,8 @@ xcopy "$(ProjectDir)..\config\*" "$(ProjectDir)..\bin\$(Configuration)$(Platform
       </IgnoreAllDefaultLibraries>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)..\3rd\mysqlclient\bin\x$(PlatformArchitecture)\$(Configuration)\*.dll" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"
-xcopy "$(ProjectDir)..\config\*" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"</Command>
+      <Command>xcopy/y "$(ProjectDir)..\3rd\mysqlclient\bin\x$(PlatformArchitecture)\$(Configuration)\*.dll" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"
+xcopy/y "$(ProjectDir)..\config\*" "$(ProjectDir)..\bin\$(Configuration)$(PlatformArchitecture)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

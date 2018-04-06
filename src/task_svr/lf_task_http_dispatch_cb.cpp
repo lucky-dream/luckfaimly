@@ -75,17 +75,53 @@ namespace LF
 			ctx->set_response_http_body(err);
 			return;
 		}
-		lf_string proxy_url = ctx->original_uri();
-		Uint32 index = proxy_url.find(LF_TASKSVR_NAME);
-		if (proxy_url[index + lf_string(LF_TASKSVR_NAME).size() + 1] != '?')
-		{
-			lf_task_http_dispath::request_fwd(ctx,op);
-			return;
-		}
 		lf_task_http_dispath::task_http_service_dispath(ctx,name_value, op);
 	}
 	void lf_task_http_dispatch_cb::default_http_handler_callback(const LFCtxPtr & ctx)
 	{
+		std::string query;
+		if ((lf_http_def::http_method_type)(ctx->get_req_type()) == lf_http_def::HTTP_REQ_GET
+			|| (lf_http_def::http_method_type)(ctx->get_req_type()) == lf_http_def::HTTP_REQ_POST)
+		{
+			lf_string orig_uri = (ctx->original_uri() == nullptr) ? "" : ctx->original_uri();
+			get_query_paramter(orig_uri, query);
+
+		}
+		else
+		{
+			ctx->set_response_http_code(lf_http_def::HTTP_NOT_IMPLEMENTED);
+			ctx->AddResponseHeader("Content-Type", "text/html");
+			ctx->AddResponseHeader("Server", "LF_TASK");
+			ctx->AddResponseHeader("Access-Control-Allow-Origin", "*");
+			ctx->AddResponseHeader("Transfer-Encoding", "utf-8");
+			lf_string err = "Not Implemented£¡";
+			ctx->AddResponseHeader("Content-Length", std::to_string(err.length()));
+			ctx->set_response_http_body(err);
+			return;
+		}
+		lf_name_value_collection name_value;
+		ParserURI(query, name_value);
+
+		std::string op = name_value.get("op", "");
+		if (op.empty())
+		{
+			ctx->set_response_http_code(lf_http_def::HTTP_BAD_REQUEST);
+			ctx->AddResponseHeader("Content-Type", "text/html");
+			ctx->AddResponseHeader("Server", "LF_TASK");
+			ctx->AddResponseHeader("Access-Control-Allow-Origin", "*");
+			ctx->AddResponseHeader("Transfer-Encoding", "utf-8");
+			lf_string err = "Bad Request£¡";
+			ctx->AddResponseHeader("Content-Length", std::to_string(err.length()));
+			ctx->set_response_http_body(err);
+			return;
+		}
+		lf_string proxy_url = ctx->original_uri();
+		Uint32 index = proxy_url.find(LF_TASKSVR_NAME);
+		if (proxy_url[index + lf_string(LF_TASKSVR_NAME).size() + 1] != '?')
+		{
+			lf_task_http_dispath::request_fwd(ctx, op);
+			return;
+		}
 		ctx->set_response_http_code(lf_http_def::HTTP_NOT_FOUND);
 		ctx->AddResponseHeader("Content-Type", "text/html");
 		ctx->AddResponseHeader("Server", "LF_TASK");
