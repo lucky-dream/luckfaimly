@@ -36,6 +36,9 @@
     <ClInclude Include="..\3rd\xxHash\xxhash.h">
       <Filter>base</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\util\lf_error_code.h">
+      <Filter>base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\util\lf_lock.cpp">
@@ -51,6 +54,9 @@
       <Filter>base</Filter>
     </ClCompile>
     <ClCompile Include="..\3rd\xxHash\xxhash.c">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\lf_error_code.cpp">
       <Filter>base</Filter>
     </ClCompile>
   </ItemGroup>

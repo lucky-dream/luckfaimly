@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
 	{
 		return 1;
 	}
-	lf_http_server http_svr(4);
+	lf_http_server http_svr(TASK_THREAD_NUM);
 	http_svr.RegisterDefaultHandler(&lf_task_http_dispatch_cb::default_http_handler_callback);
 	http_svr.RegisterHandler(LF_TASKSVR_NAME, &lf_task_http_dispatch_cb::task_http_handler_callback);
 	http_svr.Init(config.port);

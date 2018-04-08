@@ -120,6 +120,10 @@ namespace LF
 		};
 		_svr->RegisterHandler(uri,f);
 	}
+#ifndef LF_TASKSVR_NAME
+#define LF_TASKSVR_NAME "task"
+#endif // !LF_TASKSVR_NAME
+
 	void lf_http_server::RegisterDefaultHandler(LF_HTTPRequestCB callback)
 	{
 		if (!_svr.get())
@@ -127,19 +131,25 @@ namespace LF
 			//todo:@str set log
 			return;
 		}
-		if (!_svr.get())
-		{
-			//todo:@str set log
-			return;
-		}
-		auto f = [callback](evpp::EventLoop* loop,
+		lf_string uri(LF_TASKSVR_NAME);
+		auto f = [uri,callback](evpp::EventLoop* loop,
 			const evpp::http::ContextPtr& evpp_ctx,
 			const evpp::http::HTTPSendResponseCallback& cb) {
 			LFCtxPtr ctx(new lf_context(evpp_ctx));
 			callback(ctx);
-			ctx->AddResponseHeader("Content-Length", std::to_string(ctx->get_response_http_body().length()));
-			cb(ctx->get_response_http_body());
-			return;
+			lf_string proxy_url = ctx->original_uri();
+			Uint32 index = proxy_url.find(uri);
+			if (proxy_url[index + uri.size() + 1] != '?' || ctx->get_response_handler_type() == LFResponseHandlerType::LF_NORMAL)
+			{
+				ctx->AddResponseHeader("Content-Length", std::to_string(ctx->get_response_http_body().length()));
+				cb(ctx->get_response_http_body());
+				return;
+			}
+			else if (ctx->get_response_handler_type() == LFResponseHandlerType::LF_PROXY)
+			{
+				lf_http_proxy::proxy_by_svr_name(std::move(uri), std::move(ctx),
+					loop, std::move(cb));
+			}
 		};
 		_svr->RegisterDefaultHandler(f);
 	}

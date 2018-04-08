@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="def">
+      <UniqueIdentifier>{20d5c7c0-ede4-42c9-8d47-d0375bf0300b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api">
+      <UniqueIdentifier>{3e5c8936-ea36-44a0-8feb-5f92a574150f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="service">
+      <UniqueIdentifier>{32d93dc9-5e1f-4bfb-acd6-8696fa2257f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="database">
+      <UniqueIdentifier>{481b6e6b-00d3-4616-b572-afae91e7f929}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="database\meta">
+      <UniqueIdentifier>{f8135135-41ec-4daf-acb6-970628ffb7fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="database\table-mgr">
+      <UniqueIdentifier>{f2e8259d-4436-440a-8453-8ce1d8a8b469}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\fmis\main.cpp" />
+    <ClCompile Include="..\src\fmis\lf_fmis_constant_def.cpp">
+      <Filter>def</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fmis\lf_fmis_config.cpp">
+      <Filter>def</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fmis\lf_fmis_http_dispatch.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fmis\lf_fmis_http_dispatch_cb.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\fmis\lf_fmis_service_handler.cpp">
+      <Filter>service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbmgr\lf_db_mgr.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbmgr\lf_db_transaction_by_mysql.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbmgr\lf_group_bill_mgr_by_mysql.cpp">
+      <Filter>database\table-mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dbmgr\lf_owner_bill_mgr_by_mysql.cpp">
+      <Filter>database\table-mgr</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\fmis\lf_fmis_constant_def.h">
+      <Filter>def</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fmis\lf_fmis_config.h">
+      <Filter>def</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fmis\lf_fmis_http_dispatch.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fmis\lf_fmis_http_dispatch_cb.h">
+      <Filter>api</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\fmis\lf_fmis_service_handler.h">
+      <Filter>service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\dbmgr\lf_db_mgr.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\dbmgr\lf_db_transaction_by_mysql.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\dbmgr\lf_group_bill_mgr_by_mysql.h">
+      <Filter>database\table-mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\dbmgr\lf_owner_bill_mgr_by_mysql.h">
+      <Filter>database\table-mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\dbmgr\lf_bill_meta.h">
+      <Filter>database\meta</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

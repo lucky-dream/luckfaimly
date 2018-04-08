@@ -154,6 +154,7 @@
     <ClInclude Include="..\include\util\lf_string_util.h" />
     <ClInclude Include="..\include\util\lf_ascii.h" />
     <ClInclude Include="..\include\util\lf_code_util.h" />
+    <ClInclude Include="..\include\util\lf_error_code.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\3rd\xxHash\xxhash.c" />
@@ -161,6 +162,7 @@
     <ClCompile Include="..\src\util\lf_ascii.cpp" />
     <ClCompile Include="..\src\util\lf_name_value_collection.cpp" />
     <ClCompile Include="..\src\util\lf_code_util.cpp" />
+    <ClCompile Include="..\src\util\lf_error_code.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

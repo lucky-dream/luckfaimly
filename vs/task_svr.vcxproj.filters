@@ -13,6 +13,9 @@
     <Filter Include="user-mgr">
       <UniqueIdentifier>{bcbef228-9c3c-4cfc-9d0e-c2643c82dad0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="database">
+      <UniqueIdentifier>{8e7f35d0-42d7-4d86-97b3-5dc5f8c29355}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\task_svr\main.cpp" />
@@ -37,7 +40,9 @@
     <ClCompile Include="..\src\task_svr\lf_tasksvr_config.cpp">
       <Filter>def</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\dbmgr\lf_db_mgr.cpp" />
+    <ClCompile Include="..\src\dbmgr\lf_db_mgr.cpp">
+      <Filter>database</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\task_svr\lf_tasksvr_constant_def.h">
@@ -61,6 +66,8 @@
     <ClInclude Include="..\include\task_svr\lf_task_http_dispatch.h">
       <Filter>api</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\dbmgr\lf_db_mgr.h" />
+    <ClInclude Include="..\include\dbmgr\lf_db_mgr.h">
+      <Filter>database</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
