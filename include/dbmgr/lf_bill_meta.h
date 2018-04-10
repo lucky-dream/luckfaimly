@@ -3,6 +3,10 @@
 #include"util/lf_base_def.h"
 namespace LF
 {
+#define MAX_MASK_DEFAULT_32 0XFFFFFFFF     //32位最大掩码
+#define MAX_MASK_DEFAULT_64 0XFFFFFFFFFFFFFFFF  //64位最大掩码
+#define MAX_NUM_64 0XFFFFFFFFFFFFFFFF   //64位最大值
+#define MAX_RETURN_RECODE_COUNT 10000   //数据库单次返回最大值
 	enum LF_BILL_PAYMENT_MASK
 	{
 		LF_PTYPE_PAY_OUT = 0X0,    //支出
@@ -28,24 +32,24 @@ namespace LF
 	{
 		lf_string _owner_bill_id; //个人帐单id
 		lf_string _owner_id;   //所属用户id
-		Uint32 _owner_bill_type;		//个人帐单类型
-		Uint32 _ptype;				//支付类型
-		Uint64 _create_date;       //账单创建日期
-		Uint64 _sum;            //账单金额
+		uint32_t _owner_bill_type;		//个人帐单类型
+		uint32_t _ptype;				//支付类型
+		uint64_t _create_date;       //账单创建日期
+		uint64_t _sum;            //账单金额
 		lf_string _sign;        //账单描述
 	};
-	typedef std::vector<lf_owner_bill_meta> OwenrBillList;
+	typedef std::vector<lf_owner_bill_meta> OwnerBillList;
 	struct lf_group_bill_meta
 	{
 		lf_string _group_bill_id;  //组账单id
 		lf_string _group_id;  //所属组id
-		lf_string _owner_name;  //支付者名
-		Uint32 _group_bill_type;		//个人帐单类型
-		Uint32 _ptype;				//支付类型
-		Uint64 _create_date;       //账单创建日期
-		Uint64 _sum;            //账单金额
+		lf_string _owner_id;  //支付者id
+		uint32_t _group_bill_type;		//个人帐单类型
+		uint32_t _ptype;				//支付类型
+		uint64_t _create_date;       //账单创建日期
+		uint64_t _sum;            //账单金额
 		lf_string _sign;        //账单描述
-		Uint32 _status;   //结算状态，0：未结算；1：已结算。
+		uint32_t _status;   //结算状态，0：未结算；1：已结算。
 	};
 	typedef std::vector<lf_group_bill_meta> GroupBillList;
 }

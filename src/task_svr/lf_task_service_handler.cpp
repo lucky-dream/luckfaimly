@@ -78,7 +78,7 @@ namespace LF
 		return true;
 	}
 
-	static void set_err(const Uint32 status, const lf_string err_info, lf_string& outjson)
+	static void set_err(const uint32_t status, const lf_string err_info, lf_string& outjson)
 	{
 		rapidjson::StringBuffer s;
 		rapidjson::Writer<rapidjson::StringBuffer> writer(s);
@@ -126,7 +126,7 @@ namespace LF
 			return false;
 		}
 
-		Uint64 c_time = time(NULL);
+		uint64_t c_time = time(NULL);
 		lf_token_info token_info;
 		token_info.uid = uid;
 		token_info.token = token;

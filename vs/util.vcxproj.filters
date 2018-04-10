@@ -39,6 +39,9 @@
     <ClInclude Include="..\include\util\lf_error_code.h">
       <Filter>base</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\util\uuid4.h">
+      <Filter>base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\util\lf_lock.cpp">
@@ -57,6 +60,9 @@
       <Filter>base</Filter>
     </ClCompile>
     <ClCompile Include="..\src\util\lf_error_code.cpp">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\uuid4.cpp">
       <Filter>base</Filter>
     </ClCompile>
   </ItemGroup>

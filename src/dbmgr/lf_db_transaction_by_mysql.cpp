@@ -3,7 +3,7 @@
 #include "mysql.h"
 namespace LF
 {
-	Uint32 lf_db_transaction::start_transaction(lf_db_object* db)
+	uint32_t lf_db_transaction::start_transaction(lf_db_object* db)
 	{
 		if (db==nullptr)
 		{
@@ -32,7 +32,7 @@ namespace LF
 		return 0;
 	}
 
-	Uint32 lf_db_transaction::rollback(lf_db_object* db)
+	uint32_t lf_db_transaction::rollback(lf_db_object* db)
 	{
 		if (db==nullptr)
 		{
@@ -61,7 +61,7 @@ namespace LF
 		return 0;
 	}
 
-	Uint32 lf_db_transaction::commit(lf_db_object* db)
+	uint32_t lf_db_transaction::commit(lf_db_object* db)
 	{
 		if (db == nullptr)
 		{

@@ -9,7 +9,7 @@ namespace LF
 	class LF_DLL_API lf_http_server
 	{
 	public:
-		lf_http_server(const Uint32& thread_num);
+		lf_http_server(const uint32_t& thread_num);
 		~lf_http_server();
 		bool Init(int listen_port);
 		bool Init(const std::vector<int>& listen_ports);

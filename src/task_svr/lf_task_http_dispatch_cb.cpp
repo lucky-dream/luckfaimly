@@ -116,7 +116,7 @@ namespace LF
 			return;
 		}
 		lf_string proxy_url = ctx->original_uri();
-		Uint32 index = proxy_url.find(LF_TASKSVR_NAME);
+		uint32_t index = proxy_url.find(LF_TASKSVR_NAME);
 		if (proxy_url[index + lf_string(LF_TASKSVR_NAME).size() + 1] != '?')
 		{
 			lf_task_http_dispath::request_fwd(ctx, op);

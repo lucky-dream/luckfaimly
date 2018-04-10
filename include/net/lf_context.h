@@ -61,7 +61,7 @@ namespace LF
 		{
 			return _rsp_type;
 		}
-		Uint32 get_req_type()
+		uint32_t get_req_type()
 		{
 			return _ctx->req()->type;
 		}

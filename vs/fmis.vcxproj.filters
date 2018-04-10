@@ -49,6 +49,9 @@
     <ClCompile Include="..\src\dbmgr\lf_owner_bill_mgr_by_mysql.cpp">
       <Filter>database\table-mgr</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\dbmgr\lf_user_mgr_by_mysql.cpp">
+      <Filter>database\table-mgr</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\fmis\lf_fmis_constant_def.h">
@@ -80,6 +83,9 @@
     </ClInclude>
     <ClInclude Include="..\include\dbmgr\lf_bill_meta.h">
       <Filter>database\meta</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\dbmgr\lf_user_mgr_by_mysql.h">
+      <Filter>database\table-mgr</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

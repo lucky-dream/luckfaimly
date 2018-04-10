@@ -72,7 +72,7 @@ namespace LF
 		lf_code_util::base64_decode(user_data, out_user_data);
 		return out_user_data;
 	}
-	static void set_response_info(const LFCtxPtr & ctx,const Uint32& code,const lf_string& body)
+	static void set_response_info(const LFCtxPtr & ctx,const uint32_t& code,const lf_string& body)
 	{
 		ctx->set_response_http_code(code);
 		ctx->AddResponseHeader("Content-Type", "text/html");
@@ -90,7 +90,7 @@ namespace LF
 			return;
 		}
 		lf_string uid = ctx->FindRequestHeader("lf-uid");
-		Uint32 cmd = lf_fmis_cmd_map::singleton().get_cmd(op);
+		uint32_t cmd = lf_fmis_cmd_map::singleton().get_cmd(op);
 		bool ret = false;
 		lf_string body;
 		LFResponseHandlerType rht = LFResponseHandlerType::LF_NORMAL;

@@ -9,7 +9,7 @@ namespace LF
 		TASK_ENUM_CMD_TYPE(XX)
 #undef  XX
 	}
-	Uint32 lf_fmis_cmd_map::get_cmd(const lf_string & op)
+	uint32_t lf_fmis_cmd_map::get_cmd(const lf_string & op)
 	{
 		auto it = cmds.find(op);
 		if (it==cmds.end())

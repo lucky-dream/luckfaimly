@@ -8,9 +8,9 @@ namespace LF
 	lf_token_mgr g_lf_token_mgr;
 	lf_string lf_token_mgr::gen_token(const lf_string & name, const lf_string & password)
 	{
-		Uint64 now = time(NULL);
+		uint64_t now = time(NULL);
 		lf_string info = name + password + std::to_string(now);
-		Uint64 token_num = XXH64(info.c_str(), info.length(),2018);
+		uint64_t token_num = XXH64(info.c_str(), info.length(),2018);
 		lf_string token;
 		lf_code_util::uint64_to_hex(token_num, token);
 		return token;

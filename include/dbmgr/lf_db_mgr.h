@@ -10,7 +10,7 @@ namespace LF
 	struct lf_db_info
 	{
 		lf_string _host;
-		Uint32 _port;
+		uint32_t _port;
 		lf_string _user_name;
 		lf_string _password;
 		lf_string _dbname;

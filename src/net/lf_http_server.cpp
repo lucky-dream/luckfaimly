@@ -2,7 +2,7 @@
 #include "net/lf_http_proxy.h"
 namespace LF
 {
-	lf_http_server::lf_http_server(const Uint32 & thread_num)
+	lf_http_server::lf_http_server(const uint32_t & thread_num)
 	{
 		_svr.reset(new evpp::http::Server(thread_num));
 	}
@@ -105,7 +105,7 @@ namespace LF
 			LFCtxPtr ctx(new lf_context(evpp_ctx));
 			callback(ctx);
 			lf_string proxy_url = ctx->original_uri();
-			Uint32 index = proxy_url.find(uri);
+			uint32_t index = proxy_url.find(uri);
 			if (proxy_url[index + uri.size() + 1] != '?'||ctx->get_response_handler_type() == LFResponseHandlerType::LF_NORMAL)
 			{
 				ctx->AddResponseHeader("Content-Length", std::to_string(ctx->get_response_http_body().length()));
@@ -138,7 +138,7 @@ namespace LF
 			LFCtxPtr ctx(new lf_context(evpp_ctx));
 			callback(ctx);
 			lf_string proxy_url = ctx->original_uri();
-			Uint32 index = proxy_url.find(uri);
+			uint32_t index = proxy_url.find(uri);
 			if (proxy_url[index + uri.size() + 1] != '?' || ctx->get_response_handler_type() == LFResponseHandlerType::LF_NORMAL)
 			{
 				ctx->AddResponseHeader("Content-Length", std::to_string(ctx->get_response_http_body().length()));

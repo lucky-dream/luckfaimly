@@ -23,6 +23,7 @@
     <ClCompile Include="..\src\dbmgr\lf_db_transaction_by_mysql.cpp" />
     <ClCompile Include="..\src\dbmgr\lf_group_bill_mgr_by_mysql.cpp" />
     <ClCompile Include="..\src\dbmgr\lf_owner_bill_mgr_by_mysql.cpp" />
+    <ClCompile Include="..\src\dbmgr\lf_user_mgr_by_mysql.cpp" />
     <ClCompile Include="..\src\fmis\lf_fmis_config.cpp" />
     <ClCompile Include="..\src\fmis\lf_fmis_constant_def.cpp" />
     <ClCompile Include="..\src\fmis\lf_fmis_http_dispatch.cpp" />
@@ -36,6 +37,7 @@
     <ClInclude Include="..\include\dbmgr\lf_bill_meta.h" />
     <ClInclude Include="..\include\dbmgr\lf_owner_bill_mgr_by_mysql.h" />
     <ClInclude Include="..\include\dbmgr\lf_db_transaction_by_mysql.h" />
+    <ClInclude Include="..\include\dbmgr\lf_user_mgr_by_mysql.h" />
     <ClInclude Include="..\include\fmis\lf_fmis_config.h" />
     <ClInclude Include="..\include\fmis\lf_fmis_constant_def.h" />
     <ClInclude Include="..\include\fmis\lf_fmis_http_dispatch.h" />
@@ -114,7 +116,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)../3rd\rapidjson\include;$(ProjectDir)../3rd\mysqlclient\include;$(ProjectDir)../3rd;$(ProjectDir)../3rd/evpp;$(ProjectDir)../include;%(AdditionalIncludeDirectories);$(VcpkgRoot)include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -131,7 +133,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)../3rd\rapidjson\include;$(ProjectDir)../3rd\mysqlclient\include;$(ProjectDir)../3rd;$(ProjectDir)../3rd/evpp;$(ProjectDir)../include;%(AdditionalIncludeDirectories);$(VcpkgRoot)include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -150,7 +152,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)../3rd\rapidjson\include;$(ProjectDir)../3rd\mysqlclient\include;$(ProjectDir)../3rd;$(ProjectDir)../3rd/evpp;$(ProjectDir)../include;%(AdditionalIncludeDirectories);$(VcpkgRoot)include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -171,7 +173,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(ProjectDir)../3rd\rapidjson\include;$(ProjectDir)../3rd\mysqlclient\include;$(ProjectDir)../3rd;$(ProjectDir)../3rd/evpp;$(ProjectDir)../include;%(AdditionalIncludeDirectories);$(VcpkgRoot)include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

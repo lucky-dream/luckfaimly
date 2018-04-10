@@ -11,9 +11,9 @@ namespace LF
 		lf_string _name;
 		lf_string _password;
 		lf_string _email;
-		Uint32 _sex;
+		uint32_t _sex;
 		lf_string _sign;
-		Uint64 _ctime;
+		uint64_t _ctime;
 	};
 	typedef std::shared_ptr<lf_user_info> UserInfoPtr;
 	class lf_user_register_cache:public lf_singleton<lf_user_register_cache>

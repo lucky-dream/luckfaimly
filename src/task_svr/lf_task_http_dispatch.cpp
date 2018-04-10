@@ -76,7 +76,7 @@ namespace LF
 
 	void LF::lf_task_http_dispath::task_http_service_dispath(const LFCtxPtr & ctx, const lf_name_value_collection& params, const lf_string& op)
 	{
-		Uint32 cmd = lf_task_cmd_map::singleton().get_cmd(op);
+		uint32_t cmd = lf_task_cmd_map::singleton().get_cmd(op);
 		bool ret = false;
 		lf_string body;
 		LFResponseHandlerType rht = LFResponseHandlerType::LF_NORMAL;

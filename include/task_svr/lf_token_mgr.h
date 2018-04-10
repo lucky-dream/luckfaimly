@@ -10,8 +10,8 @@ namespace LF
 		lf_string uid;
 		lf_string username;
 		lf_string token;
-		Uint64 period_validity;
-		Uint64 create_time;
+		uint64_t period_validity;
+		uint64_t create_time;
 	};
 	class lf_token_mgr:public lf_singleton<lf_token_mgr>
 	{

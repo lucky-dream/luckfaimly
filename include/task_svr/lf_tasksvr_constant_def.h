@@ -23,9 +23,9 @@ namespace LF
 	{
 	public:
 		lf_task_cmd_map();
-		Uint32 get_cmd(const lf_string& op);
+		uint32_t get_cmd(const lf_string& op);
 	private:
-		typedef std::map<lf_string, Uint32> CmdMap;
+		typedef std::map<lf_string, uint32_t> CmdMap;
 		CmdMap cmds;
 	};
 }

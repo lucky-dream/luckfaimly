@@ -11,14 +11,15 @@ namespace LF
 #endif
 #endif // WIN32
 
-	typedef int  Int32;
-	typedef unsigned int Uint32;
-	typedef short Int16;
-	typedef unsigned short Uint16;
-	typedef char Int8;
-	typedef unsigned char Uint8;
+	typedef int  int32_t;
+	typedef unsigned int uint32_t;
+	typedef short int16_t;
+	typedef unsigned short uint16_t;
+	typedef char int8_t;
+	typedef unsigned char uint8_t;
 	typedef std::string lf_string;
-	typedef unsigned long long Uint64;
+	typedef unsigned long long uint64_t;
+	typedef long long int64_t;
 }
 #endif // !LF_BASE_DEF_H
 

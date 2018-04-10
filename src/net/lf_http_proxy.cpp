@@ -10,7 +10,7 @@ namespace LF
 		evpp::EventLoop * loop, const evpp::http::HTTPSendResponseCallback && cb)
 	{
 		lf_string proxy_url  = ctx->original_uri();
-		Uint32 index = proxy_url.find(uri);
+		uint32_t index = proxy_url.find(uri);
 		proxy_url = proxy_url.substr(index+uri.size()+1);
 		lf_string host;
 		if (lf_proxy_conf::singleton().is_proxy_fwd())

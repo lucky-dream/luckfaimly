@@ -7,11 +7,11 @@ namespace LF
 	class lf_db_transaction
 	{
 	public:
-		virtual Uint32 start_transaction(lf_db_object* db);
+		virtual uint32_t start_transaction(lf_db_object* db);
 		
-		virtual Uint32 rollback(lf_db_object* db);
+		virtual uint32_t rollback(lf_db_object* db);
 		
-		virtual Uint32 commit(lf_db_object* db);
+		virtual uint32_t commit(lf_db_object* db);
 	private:
 	};
 
