@@ -139,6 +139,12 @@ namespace LF
 		meta._create_date = doc["cdate"].GetUint64();
 		meta._sum = doc["sum"].GetUint();
 		meta._sign = doc["sign"].GetString();
+		return add_owner_bill(uid,meta,out_json);
+	}
+	bool lf_fmis_service_handler::add_owner_bill(const lf_string & uid, lf_owner_bill_meta meta, lf_string & out_json)
+	{
+		uint32_t status = 0;
+		lf_string err;
 		auto db = lf_db_module::get_conn();
 		if (!db)
 		{
@@ -146,7 +152,7 @@ namespace LF
 			set_out_json_by_status(status, err, out_json);
 			return false;
 		}
-		uint32_t ret = lf_owner_bill_mgr::add_recode(db,meta);
+		uint32_t ret = lf_owner_bill_mgr::add_recode(db, meta);
 		lf_db_module::give_back(db);
 		if (ret != 0)
 		{
@@ -154,7 +160,7 @@ namespace LF
 			set_out_json_by_status(status, err, out_json);
 			return false;
 		}
-		set_out_json_by_status(status,"",out_json);
+		set_out_json_by_status(status, "", out_json);
 		return true;
 	}
 	bool lf_fmis_service_handler::del_owner_bill(const lf_string & uid, const lf_string & param, lf_string & out_json)
@@ -406,9 +412,219 @@ namespace LF
 		out_json.assign(s.GetString(), s.GetSize());
 		return true;
 	}
+
 	bool lf_fmis_service_handler::compute_group_bill(const lf_string & uid, const lf_string & param, lf_string & out_json)
 	{
-		return false;
+		uint32_t status = 0;
+		lf_string err;
+		rapidjson::Document doc;
+		doc.Parse(param.c_str(), param.length());
+		if (doc.HasParseError())
+		{
+			_SET_ERR_CODE(err, status, LF_ERROR_CODE::LF_USER_INVALID_JSON);
+			set_out_json_by_status(status, err, out_json);
+			return false;
+		}
+		if (!(_CHECK_JSON(doc, "list", Array)))
+		{
+			_SET_ERR_CODE(err, status, LF_ERROR_CODE::LF_USER_JSON_KEY_ERROR);
+			set_out_json_by_status(status, err, out_json);
+			return false;
+		}
+		rapidjson::Document::Array list = doc["list"].GetArray();
+		if (!(list.Size()&&list[0].IsString()))
+		{
+			_SET_ERR_CODE(err, status, LF_ERROR_CODE::LF_USER_JSON_KEY_ERROR);
+			set_out_json_by_status(status, err, out_json);
+			return false;
+		}
+		lf_string gid;
+		uint32_t ret = 0;
+		auto db = lf_db_module::get_conn();
+		if (!db)
+		{
+			_SET_ERR_CODE(err, status, LF_ERROR_CODE::LF_SYSTEM_DB_CONNECT_ERROR);
+			set_out_json_by_status(status, err, out_json);
+			return false;
+		}
+		//-------- 获取gid ---------//
+		if (_CHECK_JSON(doc, "gname", String))
+		{
+			ret = lf_group_mgr::find_id(doc["gname"].GetString(), db, gid);
+			if (ret != 0)
+			{
+				lf_db_module::give_back(db);
+				_SET_ERR_CODE(err, status, ret);
+				set_out_json_by_status(status, err, out_json);
+				return false;
+			}
+		}
+		else if (_CHECK_JSON(doc, "gid", String))
+		{
+			gid = doc["gid"].GetString();
+		}
+		else
+		{
+			lf_db_module::give_back(db);
+			_SET_ERR_CODE(err, status, LF_ERROR_CODE::LF_USER_JSON_KEY_ERROR);
+			set_out_json_by_status(status, err, out_json);
+			return false;
+		}
+		
+		//--------- 获取gbmeta 列表 ----------//
+		GroupBillList gblist;
+		for (int32_t i=0;i<list.Size();i++)
+		{
+			lf_group_bill_meta gmeta;
+			ret = lf_group_bill_mgr::find_recode(gid,db,list[i].GetString(), gmeta);
+			if (ret != 0)
+			{
+				lf_db_module::give_back(db);
+				_SET_ERR_CODE(err, status, ret);
+				set_out_json_by_status(status, err, out_json);
+				return false;
+			}
+			//------ 排除已结算账单 -------//
+			if (gmeta._status == 1)
+			{
+				gblist.push_back(gmeta);
+			}
+		}
+		//--------- 获取组内user 列表 ---------//
+		lf_group_mgr::UserList user_list;
+		ret = lf_group_mgr::find_users(gid,db,user_list);
+		lf_db_module::give_back(db);
+		if (ret != 0)
+		{
+			_SET_ERR_CODE(err, status, ret);
+			set_out_json_by_status(status, err, out_json);
+			return false;
+		}
+		return compute_group_bill(uid,gblist, user_list,out_json);
+	}
+	bool lf_fmis_service_handler::compute_group_bill(const lf_string&group_id, const GroupBillList& gblist,
+		const lf_group_mgr::UserList& user_list, lf_string& out_json)
+	{
+		uint32_t status = 0;
+		lf_string err;
+		uint32_t ret = 0;
+		if (user_list.size()<=0|| gblist.size()<=0)
+		{
+			_SET_ERR_CODE(err, status, LF_ERROR_CODE::LF_USER_NO_RECODE);
+			set_out_json_by_status(status, err, out_json);
+			return false;
+		}
+		auto db = lf_db_module::get_conn();
+		if (!db)
+		{
+			_SET_ERR_CODE(err, status, LF_ERROR_CODE::LF_SYSTEM_DB_CONNECT_ERROR);
+			set_out_json_by_status(status, err, out_json);
+			return false;
+		}
+		//-------- 开启事务 --------//
+		ret = lf_db_transaction::start_transaction(db);
+		if (ret!=0)
+		{
+			lf_db_module::give_back(db);
+			_SET_ERR_CODE(err, status, ret);
+			set_out_json_by_status(status, err, out_json);
+			return false;
+		}
+		//-------- 账单计算 --------//
+		int64_t total_sum=0;
+		typedef std::map<lf_string, int64_t> ResultMap;
+		ResultMap result;
+		for (auto it : user_list)
+		{
+			result[it] = 0;
+		}
+		//总值计算
+		for (auto it:gblist)
+		{
+			int64_t sum = (((it._ptype & 1) * 2 - 1)*it._sum);//支出为负值
+			total_sum += sum;
+			result[it._owner_id] += sum;
+		}
+		//平均值计算
+		int64_t sel = total_sum / user_list.size();
+		//结果计算并向用户个人账单中加入记录
+		for (auto it:result)
+		{
+			it.second = sel - it.second;
+			if (0==it.second)
+			{
+				continue;
+			}
+			lf_owner_bill_meta obmeta;
+			obmeta._create_date = time(NULL); //todo set create data
+			obmeta._ptype = it.second < 0 ? LF_BILL_PAYMENT_MASK::LF_PTYPE_PAY_OUT| LF_BILL_PAYMENT_MASK::LF_PTYPE_OTHER
+				: LF_BILL_PAYMENT_MASK::LF_PTYPE_PAY_IN|LF_BILL_PAYMENT_MASK::LF_PTYPE_OTHER;
+			obmeta._sum = it.second < 0 ? -obmeta._sum : obmeta._sum;
+			obmeta._owner_id = it.first;
+			obmeta._sign.assign("组账单结算");
+			ret = lf_owner_bill_mgr::add_recode(db,obmeta);
+			if (ret != 0)
+			{
+				lf_db_transaction::rollback(db);
+				lf_db_module::give_back(db);
+				_SET_ERR_CODE(err, status, ret);
+				set_out_json_by_status(status, err, out_json);
+				return false;
+			}
+		}
+		//-------- 更新组账单状态 ---------//
+		for (auto it:gblist)
+		{
+			ret = lf_group_bill_mgr::update_bill_status(group_id,db,it._group_bill_id, 2);
+			if (ret != 0)
+			{
+				lf_db_transaction::rollback(db);
+				lf_db_module::give_back(db);
+				_SET_ERR_CODE(err, status, ret);
+				set_out_json_by_status(status, err, out_json);
+				return false;
+			}
+		}
+		//write返回信息
+		rapidjson::StringBuffer s;
+		rapidjson::Writer<rapidjson::StringBuffer> writer(s);
+		writer.StartObject();
+		writer.Key("status");
+		writer.Uint(0);
+		writer.Key("list");
+		writer.StartArray();
+		for (auto it:result)
+		{
+			lf_string uname;
+			ret = lf_user_mgr::find_name(it.first,db,uname);
+			if (ret != 0)
+			{
+				lf_db_transaction::rollback(db);
+				lf_db_module::give_back(db);
+				_SET_ERR_CODE(err, status, ret);
+				set_out_json_by_status(status, err, out_json);
+				return false;
+			}
+			writer.StartObject();
+			writer.Key("uname");
+			writer.String(uname.c_str());
+			writer.Key("sum");
+			writer.Int64(it.second);
+			writer.EndObject();
+		}
+		writer.EndArray();
+		writer.EndObject();
+		out_json.assign(s.GetString(),s.GetSize());
+		//-------- 提交事务 --------//
+		ret = lf_db_transaction::commit(db);
+		lf_db_module::give_back(db);
+		if (ret != 0)
+		{
+			_SET_ERR_CODE(err, status, ret);
+			set_out_json_by_status(status, err, out_json);
+			return false;
+		}
+		return true;
 	}
 	bool lf_fmis_service_handler::del_group_bill(const lf_string & uid, const lf_string & param, lf_string & out_json)
 	{

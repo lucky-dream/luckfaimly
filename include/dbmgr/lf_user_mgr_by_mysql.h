@@ -10,11 +10,14 @@ namespace LF
 		static uint32_t find_name(const lf_string& uid, lf_db_object* db, lf_string& uname);
 		static uint32_t find_id(const lf_string& uname, lf_db_object* db, lf_string& uid);
 	};
+	
 	class lf_group_mgr
 	{
 	public:
+		typedef std::vector<lf_string> UserList;
 		static uint32_t find_name(const lf_string& gid, lf_db_object* db, lf_string& gname);
 		static uint32_t find_id(const lf_string& gname, lf_db_object* db, lf_string& gid);
+		static uint32_t find_users(const lf_string& gid, lf_db_object* db, UserList& list);
 	};
 }
 #endif // !LF_USER_MGR_BY_MYSQL_H

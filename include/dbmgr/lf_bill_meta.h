@@ -37,6 +37,11 @@ namespace LF
 		uint64_t _create_date;       //账单创建日期
 		uint64_t _sum;            //账单金额
 		lf_string _sign;        //账单描述
+		lf_owner_bill_meta() :_owner_bill_id(""), _owner_id(""),
+			_owner_bill_type(LF_BILL_TYPE::LF_BTYPE_GROUP_BILL_CAST),
+			_ptype(LF_BILL_PAYMENT_MASK::LF_PTYPE_PAY_OUT),
+			_create_date(0), _sum(0), _sign("")
+		{}
 	};
 	typedef std::vector<lf_owner_bill_meta> OwnerBillList;
 	struct lf_group_bill_meta
@@ -49,7 +54,7 @@ namespace LF
 		uint64_t _create_date;       //账单创建日期
 		uint64_t _sum;            //账单金额
 		lf_string _sign;        //账单描述
-		uint32_t _status;   //结算状态，0：未结算；1：已结算。
+		uint32_t _status;   //结算状态，1：未结算；2：已结算。
 	};
 	typedef std::vector<lf_group_bill_meta> GroupBillList;
 }
