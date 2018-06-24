@@ -1,6 +1,10 @@
 #ifndef LF_FMIS_SERVICE_HANDLER_H
 #define LF_FMIS_SERVICE_HANDLER_H
 #include"util/lf_base_def.h"
+#include"dbmgr/lf_bill_meta.h"
+#include"dbmgr/lf_user_mgr_by_mysql.h"
+#include"dbmgr/lf_owner_bill_mgr_by_mysql.h"
+#include"dbmgr/lf_group_bill_mgr_by_mysql.h"
 namespace LF
 {
 	class lf_fmis_service_handler

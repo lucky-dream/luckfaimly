@@ -1,6 +1,7 @@
 #ifndef LF_BILL_META_H
 #define LF_BILL_META_H
 #include"util/lf_base_def.h"
+#include<vector>
 namespace LF
 {
 #define MAX_MASK_DEFAULT_32 0XFFFFFFFF     //32位最大掩码
@@ -35,7 +36,7 @@ namespace LF
 		uint32_t _owner_bill_type;		//个人帐单类型
 		uint32_t _ptype;				//支付类型
 		uint64_t _create_date;       //账单创建日期
-		uint64_t _sum;            //账单金额
+		int64_t _sum;            //账单金额
 		lf_string _sign;        //账单描述
 		lf_owner_bill_meta() :_owner_bill_id(""), _owner_id(""),
 			_owner_bill_type(LF_BILL_TYPE::LF_BTYPE_GROUP_BILL_CAST),
